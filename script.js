@@ -1,3 +1,9 @@
+const express = require('express')
+const app = express()
+const port = 3000
+
+
+
 function rpsGame(yourChoice){
     var humanChoice, deviceChoice;
 
@@ -71,3 +77,7 @@ function frontEnd(userImage, deviceImage, finalMessage){
     document.getElementById('display-div').appendChild(messageDiv);
     document.getElementById('display-div').appendChild(deviceDiv);
 }
+
+app.listen (port, () => {
+  console.log ('app is listening at http://localhost:${3000}')
+})
